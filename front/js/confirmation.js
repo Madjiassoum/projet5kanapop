@@ -1,5 +1,5 @@
-console.log("Ici page Confirmation");
-alert("Merci pour votre commande. Gardez bien ce numéro de commande qui va s'afficher");
+// console.log("Ici page Confirmation");
+alert("Merci pour votre commande. Gardez bien ce numéro de commande qui va s'afficher. Votre panier est désormais vide !");
 localStorage.clear();
 
 // Sélection lieu d'insertion de mon numéro de commande
@@ -10,5 +10,6 @@ const uspId = usp.get("orderId");
 orderId.innerHTML= uspId;
 orderId.style.fontSize="1.2em";
 orderId.style.fontWeight="bold";
+
 
 
