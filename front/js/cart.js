@@ -263,7 +263,7 @@ let emailRegExp = new RegExp(
   // "^[a-zA-Z0-9.-_]+[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-zA-Z]{2,10}$"
 );
 
-/*========= RECUPERATION DES DONNEES DU FORMULAIRE =========*/
+/*    RECUPERATION DES DONNEES DU FORMULAIRE     */
 
 // input firstName et son message d'erreur firstNameErrorMsg
 // let errorFormFirstName = true;
