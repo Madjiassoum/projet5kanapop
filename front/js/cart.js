@@ -38,8 +38,8 @@ function getProducts() {
             (element) => element._id === idPdtLocalStorage
           );
 
-          //! Création structure des produits filtrés
-          //!@@@@@@@@@@@@@@ DEBUT CREATION ARTICLE @@@@@@@@@@@@@@@@@@@@@@
+          // Création structure des produits filtrés
+          // DEBUT CREATION ARTICLE 
           let article = document.createElement("article");
           article.setAttribute("class", "cart__item");
           article.setAttribute("data-id", `${idPdtLocalStorage}`);
@@ -248,7 +248,7 @@ function modifyQuantity() {
   }
 }
 
-// FORMULAIRE DE CONTACT
+//! FORMULAIRE DE CONTACT
 let cartOrderForm = document.querySelector(".cart__order__form");
 
 // Création des expressions régulières pour contrôler les infos entrées par l'utilisateur
@@ -378,7 +378,7 @@ inputEmail.addEventListener("change", function () {
 
 
 
-//-------- ECOUTE DU BOUTON COMMANDER -----------
+//!-------- ECOUTE DU BOUTON COMMANDER -----------
 const btnCommander = document.getElementById("order");
 btnCommander.addEventListener("click", (event) => {
   event.preventDefault(); // Empêche le rechargement de la page
@@ -396,7 +396,7 @@ btnCommander.addEventListener("click", (event) => {
     //____Gestion du formulaire de contact et validation de la commande___
     // On vérifie que tous les champs sont bien renseignés, 
     //sinon on indique un message à l'utilisateur
-    // On vérifie qu'aucun champ n'est vide
+    // On vérifie qu'aucun champ n'est vide ou valeurs des inputs pas vraies
     if (
       !inputFirstName.value ||
       !inputLastName.value ||

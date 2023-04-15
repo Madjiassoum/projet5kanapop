@@ -38,9 +38,9 @@ fetch(URL_API_PRODUITS)
        prix.innerHTML = product.price;
        prix.style.font= "white bold 1.3em";
        prix.style.marginLeft='1em';    
-      /**  FIN PROGRAMMATION DU PRIX A AFFICHER */
+      /**     FIN PROGRAMMATION DU PRIX A AFFICHER   */
 
-      /**$$$$$$$$$$$$$$$$$$$$  RIEN A MODIFIER VERS LE HAUT     $$$$$$$$$$$$$$$$$$$$$$$$$$$ */
+      /**     RIEN A MODIFIER VERS LE HAUT     */
 
         let addToCart = document.querySelector('#addToCart');
         addToCart.addEventListener('click', (event) =>{
@@ -48,9 +48,9 @@ fetch(URL_API_PRODUITS)
 
           //!  DEBUT PROGRAMMATION QUANTITE vers le bas
           const qte = document.querySelector("#quantity");
-                  const valQte = qte.value;
-                    // console.log(valQte);
-          //! FIN programmation QUANTITE
+              const valQte = qte.value;
+              // console.log(valQte);
+
 
             //! suite en haut ICI CHOIX COULEUR
             const colorOption = choix_couleur.value;  
@@ -79,9 +79,9 @@ fetch(URL_API_PRODUITS)
               let qtyBasket = parseInt(productAdded.quantity) + parseInt(result.quantity);
               result.quantity = qtyBasket;
             
-              localStorage.setItem("product",JSON.stringify(monStockage));              
-              
-            
+              localStorage.setItem("product",JSON.stringify(monStockage));   
+                
+                       
            //si le produit n'est pas dans le panier
              } else{              
             monStockage.push(productAdded);
