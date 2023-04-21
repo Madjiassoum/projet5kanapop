@@ -230,7 +230,7 @@ function modifyQuantity() {
       listQtyModif.quantity = itemModifValue;
       productLocalStorage[i].quantity = listQtyModif.quantity;
 
-      if (itemNew > 0 && itemNew <= 100 && qtites[i].valueAsNumber) {
+      if (itemNew > 0 && itemNew <= 100 && Number.isInteger(itemNew)) {
         listQtyModif.quantity = itemNew;
         localStorage.setItem("product", JSON.stringify(productLocalStorage));
 
@@ -242,6 +242,7 @@ function modifyQuantity() {
       }
       if (messageErrorQuantity) {
         alert("La quantité doit être comprise entre 1 et 100.");
+        console.log("La quantité doit être comprise entre 1 et 100.");
       }
       // location.reload();
     }); //fin addEventListener
@@ -455,7 +456,7 @@ btnCommander.addEventListener("click", (event) => {
         .then((response) => response.json())
         .then((data) => {
           console.log(data);
-          localStorage.setItem("orderId", data.orderId);
+          /* localStorage.setItem("orderId", data.orderId);*/
           console.log("orderId", data.orderId);
           // on redirige vers la page de confirmation de commande en passant l'orderId (numéro de commande) dans l'URL
           document.location.href = `confirmation.html?orderId=${data.orderId}`;
